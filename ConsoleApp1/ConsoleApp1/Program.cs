@@ -8,6 +8,8 @@ namespace TICTACTOE
         {
             Console.WriteLine("Hello World!");
             var g = new Tictacto();
+            g.GameIsWon();
+            Console.ReadKey();
         }
     }
 
@@ -28,10 +30,16 @@ namespace TICTACTOE
         //LOOK AT THE BOARD AND RETURN TRUE IF THERES A WINNER AND FALSE IF NO WINNER
         public bool GameIsWon()
         {
-            if (Line1[0] == true && Line2[0]== true && Line3[0]==true)
+            if (GameBoard[0][0] == true && GameBoard[0][1] == true && GameBoard[0][2] == true)
             {
                 Console.WriteLine("The game is won!");
+                return true;
             }
+            else
+            {
+                Console.WriteLine("This is not a win");
+            }
+            return false;
         }
     }
 
