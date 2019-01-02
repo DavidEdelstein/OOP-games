@@ -2,6 +2,6 @@
 {
     interface IGameboard
     {
-        bool GameIsWonRows();
+        bool GameIsWon();
     }
 }
